@@ -1,23 +1,22 @@
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
-        int i = nums.size() - 2, decI = -1, firstGre;
-        while(i >= 0) {
-            if(nums[i] < nums[i + 1]) {
-                decI = i;
-                break;
-            }
-            i--;
+        int n = nums.size(), dec, gre;
+        
+        for(dec = n - 2; dec >= 0; dec--) {
+            if(nums[dec] < nums[dec + 1]) { break; }
         }
-        if(decI == -1) { return reverse(nums.begin(), nums.end()); }
-        i = nums.size() - 1;
-        while(i >= 0) {
-            if(nums[i] > nums[decI]) {
-                swap(nums[i], nums[decI]);
-                break;
-            }
-            i--;
+        
+        if(dec < 0) {
+            reverse(nums.begin(), nums.end());
         }
-        reverse(nums.begin() + decI + 1, nums.end());
+        else {
+            for(gre = n - 1; gre > dec; gre--) {
+                if(nums[gre] > nums[dec]) { break; }
+            }
+            swap(nums[dec], nums[gre]);
+            reverse(nums.begin() + dec + 1, nums.end());
+        }
+        
     }
 };
