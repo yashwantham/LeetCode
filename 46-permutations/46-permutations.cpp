@@ -6,7 +6,7 @@ public:
         vector<vector<int>> result;
         
         do {
-            result.push_back(nums);
+            result.emplace_back(nums);
         }while(next_permutation(nums.begin(), nums.end()));
         
         return result;
