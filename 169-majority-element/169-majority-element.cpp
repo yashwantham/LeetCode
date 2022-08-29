@@ -18,3 +18,10 @@ public:
         return element;
     }
 };
+
+
+
+// The above code is the optimal approach using Moore's Voting Algorithm
+
+// Resource: https://www.youtube.com/watch?v=AoX3BPWNnoE
+// for intuition skip to 6:45
