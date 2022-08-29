@@ -1,29 +1,6 @@
 class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
-        vector<int> newArray(nums.size());
-        int pi = 0, ni = 1;
-        for(int num: nums) {
-            if(num > 0) {
-                newArray[pi] = num;
-                pi += 2;
-            }
-            else {
-                newArray[ni] = num;
-                ni += 2;
-            }
-        }
-        return newArray;
-    }
-};
-
-
-/*
-
-
-class Solution {
-public:
-    vector<int> rearrangeArray(vector<int>& nums) {
         vector<int> newArray(nums.size(), 0);
         if(nums.size() == 1) { return nums; }
         int pi = 0, ni = 1;
@@ -41,5 +18,27 @@ public:
     }
 };
 
+
+
+/*
+
+class Solution {
+public:
+    vector<int> rearrangeArray(vector<int>& nums) {
+        vector<int> newArray(nums.size());
+        int pi = 0, ni = 1;
+        for(int num: nums) {
+            if(num > 0) {
+                newArray[pi] = num;
+                pi += 2;
+            }
+            else {
+                newArray[ni] = num;
+                ni += 2;
+            }
+        }
+        return newArray;
+    }
+};
 
 */
