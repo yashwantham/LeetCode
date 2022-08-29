@@ -1,3 +1,4 @@
+// Optimal
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
@@ -17,7 +18,8 @@ public:
 };
 
 
-// Better link:  https://leetcode.com/problems/search-a-2d-matrix/discuss/1895837/C%2B%2B-BINARY-SEARCH-TREE-(**)-Explained-with-IMG
+// Better 
+// link:  https://leetcode.com/problems/search-a-2d-matrix/discuss/1895837/C%2B%2B-BINARY-SEARCH-TREE-(**)-Explained-with-IMG
 // class Solution {
 // public:
 //     bool searchMatrix(vector<vector<int>>& matrix, int target) {
