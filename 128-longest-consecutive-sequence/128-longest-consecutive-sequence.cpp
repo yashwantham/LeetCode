@@ -18,3 +18,8 @@ public:
         return maxCount + 1;
     }
 };
+
+
+// The above code is not the optimal solution.
+// The optimal solution is done using hashset, so will go through it later
+// resources: https://www.youtube.com/watch?v=qgizvmgeyUM
