@@ -14,9 +14,13 @@ public:
             for(gre = n - 1; gre > dec; gre--) {
                 if(nums[gre] > nums[dec]) { break; }
             }
-            swap(nums[dec], nums[gre]);
-            reverse(nums.begin() + dec + 1, nums.end());
+        swap(nums[dec], nums[gre]);
+        reverse(nums.begin() + dec + 1, nums.end());
         }
         
     }
 };
+
+
+// Resources
+// https://www.youtube.com/watch?v=LuLCLgMElus
