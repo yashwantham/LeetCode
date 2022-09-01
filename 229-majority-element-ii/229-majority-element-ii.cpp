@@ -36,7 +36,8 @@ public:
 };
 
 
-
+// Above code's TC: O(N) + O(N)
+//              SC: O(1)
 
 
 // Resources: https://www.youtube.com/watch?v=yDbkQd9t2ig&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=18
