@@ -16,11 +16,11 @@ public:
         sort(arr.begin(), arr.end()); // Sorted by their values.
         int lo = 0, hi = n- 1;
         while (lo < hi) {
-            int sum2 = arr[lo].first + arr[hi].first;
-            if (sum2 == target) {
+            int sum = arr[lo].first + arr[hi].first;
+            if (sum == target) {
                 return {arr[lo].second, arr[hi].second};
             }
-            if (sum2 > target) { hi--; } 
+            if (sum > target) { hi--; } 
             else { lo++; } 
         }
         return {};
