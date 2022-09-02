@@ -13,10 +13,13 @@ public:
                 
                 while(lo < hi) {
                     if(nums[lo] + nums[hi] == sum) {
-                        vector<int> temp;
-                        temp.push_back(nums[i]);
-                        temp.push_back(nums[lo]);
-                        temp.push_back(nums[hi]);
+                        vector<int> temp(3);
+                        // temp.push_back(nums[i]);
+                        // temp.push_back(nums[lo]);
+                        // temp.push_back(nums[hi]);
+                        temp[0] = nums[i];
+                        temp[1] = nums[lo];
+                        temp[2] = nums[hi];
                         res.push_back(temp);
                         
                         while(lo < hi && nums[lo] == nums[lo + 1]) { lo++; }
