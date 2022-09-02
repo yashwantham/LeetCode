@@ -2,9 +2,9 @@ class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         vector<vector<int>> mergedIntervals;
-        if(intervals.size() == 0) {
-            return mergedIntervals;
-        }
+        // if(intervals.size() == 0) {
+        //     return mergedIntervals;
+        // }
         sort(intervals.begin(), intervals.end());
         vector<int> tempInterval = intervals[0];
         for(auto i: intervals) {
@@ -20,3 +20,8 @@ public:
         return mergedIntervals;        
     }
 };
+
+
+
+// Resources
+// https://www.youtube.com/watch?v=2JzRBPFYbKE
