@@ -7,6 +7,7 @@ public:
             int mid = start + (end - start) / 2;
             if(nums[mid] == target) { return true; }
             
+            // For Duplicate case
             if((nums[start] == nums[mid]) && (nums[end] == nums[mid]) ) {
                 start++; end--;
             }
