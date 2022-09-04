@@ -8,7 +8,7 @@ public:
             if(nums[mid] == target) { return true; }
             
             if((nums[start] == nums[mid]) && (nums[end] == nums[mid]) ) {
-                ++start; --end;
+                start++; end--;
             }
             
             // check if left half is sorted
