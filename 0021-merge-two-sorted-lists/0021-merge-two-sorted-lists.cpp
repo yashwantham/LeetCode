@@ -42,16 +42,12 @@ public:
             }
         }
         
-        while(l1 != NULL) {
+        if(l1 != NULL) {
             ft -> next = l1;
-            // ft = l1;
-            // l1 = l1 -> next;
             return fh;
         }
-        while(l2 != NULL) {
+        if(l2 != NULL) {
             ft -> next = l2;
-            // ft = l2;
-            // l2 = l2 -> next;
             return fh;
         }
         return fh;
