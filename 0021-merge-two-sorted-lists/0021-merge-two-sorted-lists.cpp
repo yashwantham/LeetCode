@@ -10,46 +10,45 @@
  */
 class Solution {
 public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        if(l1 == NULL) { return l2; }
-        if(l2 == NULL) { return l1; }
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        if(list1 == NULL) { return list2; }
+        if(list2 == NULL) { return list1; }
         ListNode *fh = NULL;
         ListNode *ft = NULL;
-        while(l1 != NULL && l2 != NULL) {
+        while(list1 != NULL && list2 != NULL) {
             if(fh == NULL) {
-                if(l1 -> val < l2 -> val) {
-                    fh = l1;
-                    ft = l1;
-                    l1 = l1 -> next;
+                if(list1 -> val < list2 -> val) {
+                    fh = list1;
+                    ft = list1;
+                    list1 = list1 -> next;
                 }
                 else {
-                    fh = l2;
-                    ft = l2;
-                    l2 = l2 -> next;
+                    fh = list2;
+                    ft = list2;
+                    list2 = list2 -> next;
                 }
             }
             else {
-                if(l1 -> val < l2 -> val) {
-                    ft -> next = l1;
-                    ft = l1;
-                    l1 = l1 -> next;
+                if(list1 -> val < list2 -> val) {
+                    ft -> next = list1;
+                    ft = list1;
+                    list1 = list1 -> next;
                 }
                 else {
-                    ft -> next = l2;
-                    ft = l2;
-                    l2 = l2 -> next;
+                    ft -> next = list2;
+                    ft = list2;
+                    list2 = list2 -> next;
                 }
             }
         }
-        
-        if(l1 != NULL) {
-            ft -> next = l1;
+        if(list1 != NULL) {
+            ft -> next = list1;
             return fh;
         }
-        if(l2 != NULL) {
-            ft -> next = l2;
+        if(list2 != NULL) {
+            ft -> next = list2;
             return fh;
         }
-        return fh;
+        return NULL;
     }
 };
