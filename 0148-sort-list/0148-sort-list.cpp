@@ -29,12 +29,12 @@ public:
         
         if(l1 != NULL) {
             cur -> next = l1;
-            l1 = l1 -> next;
+            // l1 = l1 -> next;
         }
         
         if(l2 != NULL) {
             cur -> next = l2;
-            l2 = l2 -> next;
+            // l2 = l2 -> next;
         }
         
         return ptr -> next;
