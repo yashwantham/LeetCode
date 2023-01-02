@@ -14,14 +14,12 @@ public:
         if(head == NULL || head -> next == NULL) { return head; }
         
         ListNode* smallAns = reverseList(head -> next);
-        
         ListNode *temp = smallAns;
         while(temp -> next != NULL) {
             temp = temp -> next;
         }
         temp -> next = head;
         head -> next = NULL;
-        
         return smallAns;
     }
 };
