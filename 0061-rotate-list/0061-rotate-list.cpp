@@ -32,7 +32,6 @@ public:
         
         head = calc -> next;
         calc -> next = NULL;
-        
         return head;
         
     }
